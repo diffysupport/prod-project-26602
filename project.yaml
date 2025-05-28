@@ -1,0 +1,42 @@
+basic:
+    name: timpteequipmenttrailers.com
+    environments:
+        production: 'https://timpteequipmenttrailers.com'
+        staging: ''
+        development: ''
+    breakpoints:
+        - 375
+        - 768
+        - 1200
+    pages:
+        - /
+        - /trailer-models/514-ez-load
+    monitoring:
+        days: {  }
+        type: ''
+        schedule_time: '12:30 AM'
+        schedule_time_zone: Europe/London
+        compare_with: last-production
+        compare_with_fresh: production
+advanced:
+    mask: ''
+    remove: ''
+    delay: 10
+    scroll: false
+    headers:
+        - { header: User-Agent, value: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)' }
+    cookies: ''
+    custom_js: ''
+    custom_css: ''
+    mock_content: ''
+    sensitivity: 15
+    night_mode: ''
+    retina_images: ''
+    performance:
+        workers_production: '15'
+        workers_nonproduction: '10'
+        workers_production_delay: 0
+        workers_nonproduction_delay: 0
+    stabilize: true
+proxy: false
+type: single-site
