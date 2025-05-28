@@ -27,7 +27,7 @@ advanced:
     headers:
         - { header: User-Agent, value: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)' }
     cookies: ''
-    custom_js: ''
+    custom_js: "// Stop videos\ndocument.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime = 0; });\n\n// Stop slick slider\nsetInterval(function(){\n  \tjQuery('.slick-slider').slick('slickGoTo', 0, true);\n\tjQuery('.slick-slider').slick('slickSetOption', 'autoplay', false, true);\n\tjQuery('.slick-slider').slick('slickPause');\n}, 1000);\n"
     custom_css: ''
     mock_content:
         - { selector: '', type: title }
